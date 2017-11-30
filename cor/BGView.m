@@ -97,6 +97,7 @@
                 } else {
                     [self leftActionEnd:self];
                 }
+                [self finishBehind];
             }];
         }
     }
@@ -117,14 +118,13 @@
 
 
 
-- (void)finishBehind:(UIView *)currentV{
+- (void)finishBehind{
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        BGView *cur = (BGView *)currentV;
         CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-        cur.transform = transform;
-        cur.began_X = 0;
-        cur.alpha = 1.0;
+        self.transform = transform;
+        self.began_X = 0;
+        self.alpha = 1.0;
     });
     
 }

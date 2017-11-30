@@ -22,6 +22,5 @@
 @property (nonatomic, assign) id<BGViewDelegate>delegate;
 
 
-- (void)finishBehind:(UIView *)currentV;
 
 @end

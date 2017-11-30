@@ -67,7 +67,6 @@
         [self bringSubviewToFront:self.bgView1];
     }
     
-    [topView finishBehind:topView];
 }
 
 - (void)topViewRightDidAction:(BGView *)topView{
@@ -78,7 +77,6 @@
     } else {
         [self bringSubviewToFront:self.bgView1];
     }
-    [topView finishBehind:topView];
 }
 
 
